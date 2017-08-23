@@ -1,0 +1,56 @@
+<header>
+  <nav id="top-navbar" class="navbar hide-navbar z-2">
+    <div id="top-navbar-content-wrapper" class="wrapper">
+
+        <!-- Navbar Brand -->
+        <div class="navbar-brand">
+
+          <a class="navbar-item" href={{ site.data.header.title_url }}>
+            <span class="h3-style">{{ site.data.header.title }}</span>
+          </a>
+
+          <!-- Navbar Hamburger Menu -->
+          <div id="top-navbar-burger" class="navbar-burger burger" data-target="top-navbar-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+        </div>
+
+        <!-- Navbar Desktop Menu -->
+        <div id="top-navbar-menu" class="navbar-menu">
+          <div class="navbar-end">
+
+            <a class="navbar-item sliding-link"
+            href={{ site.data.header.button_1_url }}>
+              <span class="h4-style grow">{{ site.data.header.button_1_text }}</span>
+            </a>
+            <a class="navbar-item sliding-link"
+            href={{ site.data.header.button_2_url }}>
+              <span class="h4-style grow">{{ site.data.header.button_2_text }}</span>
+            </a>
+
+            <div class="navbar-item last-navbar-item">
+              <a class="navbar-menu-icon grow"
+              href={{ site.data.header.github_url }} target="_blank">
+                <i class="fa fa-github"></i>
+              </a>
+
+              <a class="navbar-menu-icon grow"
+              href={{ site.data.header.codepen_url }} target="_blank">
+                <i class="fa fa-codepen"></i>
+              </a>
+
+              <a class="navbar-menu-icon grow"
+              href={{ site.data.header.linkedin_url }} target="_blank">
+                <i class="fa fa-linkedin"></i>
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+    </div>
+  </nav>
+</header>

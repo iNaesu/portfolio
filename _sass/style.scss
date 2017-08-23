@@ -1,0 +1,109 @@
+/**
+ * Main stylesheet
+ */
+
+@charset "utf-8";
+
+/* Device Breakpoints ------------------------------------------------------- */
+
+$mobile-max: 767px;
+$tablet-min: 768px;
+$desktop-min: 1008px;
+$widescreen-min: 1200px;
+
+
+/* Spacing ------------------------------------------------------------------ */
+
+$spacing-unit: 2rem;
+
+.margin-bottom-m {
+  margin-bottom: $spacing-unit !important;
+}
+
+.margin-bottom-s {
+  margin-bottom: 0.5 * $spacing-unit !important;
+}
+
+
+/* Bulma -------------------------------------------------------------------- */
+
+/* Bulma Overrides */
+$speed: 0.3s;
+$navbar-height: 5rem;
+
+@import
+  "bulma/utilities/_all",
+  "bulma/base/helpers",
+  "bulma/grid/columns",
+  "bulma/components/navbar",
+  "bulma/elements/table"
+;
+
+
+/* Fonts -------------------------------------------------------------------- */
+
+@import "fonts.scss";
+
+
+/* Colors ------------------------------------------------------------------- */
+
+$grey-color: #999;
+$grey-color-light: lighten($grey-color, 25%);
+$grey-color-dark: darken($grey-color, 25%);
+$bg-color: #f3f3f3;
+$fg-color: #404040;
+
+
+/* html/body ---------------------------------------------------------------- */
+
+html, body {
+    color: $fg-color;
+    background-color: $bg-color;
+    font-family: $base-font-family;
+    font-weight: $light-font-weight;
+    font-size: $mobile-base-font-size;
+    @media (min-width: $tablet-min) {
+      font-size: $tablet-base-font-size;
+    }
+}
+
+
+/* Reusable Components ------------------------------------------------------ */
+
+/* Disable scrolling */
+.scroll-locked {
+  overflow: hidden;
+}
+
+.grow {
+  transition: all 0.1 $easing;
+}
+.grow:hover {
+  transform: scale(1.1);
+}
+
+@import
+  "wrapper",
+  "shadows",
+  "buttons",
+  "links"
+;
+
+.hidden {
+  opacity: 0;
+}
+
+/* Site Page Styles --------------------------------------------------------- */
+
+@import
+  "wrapper",
+  "shadows",
+  "header",
+  "landing-page",
+  "home",
+  "projects",
+  "buttons",
+  "projects",
+  "about",
+  "footer"
+;

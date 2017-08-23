@@ -1,0 +1,26 @@
+/**
+* Landing page style
+*/
+
+#landing-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Going to fade these elements in */
+#landing-title, #landing-subtitle, #see-work-button {
+  opacity: 0;
+}
+
+#company-link {
+  color: lighten($fg-color, 25%);
+}
+#company-link:hover {
+  color:$fg-color;
+}
+
+#landing-subtitle {
+  margin-bottom: 0.5 * $spacing-unit;
+}

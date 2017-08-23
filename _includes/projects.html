@@ -1,0 +1,17 @@
+<div id="projects"class="section-header">
+  <h2>PROJECTS</h2>
+</div>
+
+<!-- Alternate project posts between left & right layouts -->
+{% assign sorted_projects = (site.projects | sort: 'idx') %}
+{% for project in sorted_projects %}
+
+  {% assign mod = forloop.index0 | modulo: 2 %}
+
+  {% if mod == 0 %}
+    {% include left-project-layout.html %}
+  {% else %}
+    {% include right-project-layout.html %}
+  {% endif %}
+
+{% endfor %}

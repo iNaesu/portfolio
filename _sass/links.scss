@@ -1,0 +1,26 @@
+/**
+ * Links styles
+ */
+
+a:link {
+  background-color: $bg-color !important;
+  color: $fg-color;
+  text-decoration: none;
+}
+a:visited {
+  background-color: $bg-color !important;
+  color: $fg-color;
+  text-decoration: none;
+}
+a:active {
+  background-color: $bg-color !important;
+  color: $fg-color;
+  text-decoration: none;
+}
+a:hover {
+  background-color: $bg-color !important;
+  color: $fg-color;
+  font-weight: $regular-font-weight;
+  text-decoration: none;
+}
+

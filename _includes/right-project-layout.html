@@ -1,0 +1,88 @@
+<div class="project columns is-desktop">
+
+  <!-- Project Screenshot -->
+  <div class="column is-5-desktop project-image-wrapper is-hidden-touch">
+    <img class="project-image-left"
+    src={{ project.screenshot.5x7_url }}
+    alt={{ project.screenshot.alt_text }}>
+  </div>
+
+  <!-- Spacing column -->
+  <div class="column">
+  </div>
+
+  <!-- Project description -->
+  <div class="column is-6-desktop project-description-wrapper">
+
+    <div class="project-header margin-bottom-m">
+
+      <div class="project-title">
+        <h3>{{ project.title }}</h3>
+      </div>
+
+      <div class="project-links">
+        <a class="h4-button" href={{ project.live_url }} target="_blank">
+          LIVE
+        </a>
+        <a class="h4-fa-button" href={{ project.github_url }} target="_blank">
+          <i class="fa fa-github"></i>
+        </a>
+        <a class="h4-fa-button" href={{ project.codepen_url }} target="_blank">
+          <i class="fa fa-codepen"></i>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Only show on tablets & under -->
+    <div class="project-image-wrapper is-hidden-desktop">
+      <img class="project-image"
+      src={{ project.screenshot.8x5_url }}
+      alt={{ project.screenshot.alt_text }}>
+    </div>
+
+    <div class="project-description margin-bottom-s">
+      <p>{{ project.description }}</p>
+    </div>
+
+    <div class="project-table">
+      <table class="table is-fullwidth is-striped">
+        <tbody>
+
+          {% for skill in project.skills %}
+            <tr>
+              <!-- Row header -->
+              <th rowspan="3">{{ skill.category }}</th>
+
+              <!-- Row data -->
+              {% for example in skill.examples %}
+
+                <td>{{ example }}</td>
+
+                <!-- End current row and start a new row -->
+                {% assign mod = forloop.index | modulo: 2 %}
+                {% if mod == 0 %}
+                  </tr><tr>
+                {% endif %}
+
+              {% endfor %}
+            </tr>
+
+            <!-- Empty rows for spacing and line. Nasty :/ -->
+            {% if forloop.last == false %}
+              <tr class="spacer-row"><td colspan="3"></td></tr>
+              <tr class="line-row">
+                <td colspan="3"></td>
+              </tr>
+              <tr class="spacer-row"><td colspan="3"></td></tr>
+            {% endif %}
+
+          {% endfor %}
+
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+</div>

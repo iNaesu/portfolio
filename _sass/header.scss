@@ -1,0 +1,113 @@
+/**
+* Header style
+*/
+
+/* Navbar */
+#top-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  transition: top ($speed) $easing;
+  background-color: $bg-color;
+
+  .navbar-item {
+    color: $fg-color;
+    font-size: $h4-font-size;
+    font-weight: $regular-font-weight;
+    cursor: pointer;
+
+    .h3-style, .h4-style {
+      margin-bottom: 0;
+    }
+  }
+}
+
+/* Navbar content wrapper */
+#top-navbar-content-wrapper {
+  /* Navbar brand & menu on the same row only on desktop and above (dropdown
+   * must be below navbar brand) */
+  @media (min-width: $desktop-min) {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+}
+
+/* Navbar brand */
+#top-navbar .navbar-brand {
+  @media (max-width: $desktop-min) {
+    width: 100%;
+  }
+}
+
+#top-navbar .navbar-brand .navbar-item {
+  padding-left: 0;
+}
+
+/* Burger */
+#top-navbar-burger {
+  background-color: $bg-color;
+  span {
+    height: 2px;
+  }
+}
+.navbar-burger.is-active span {
+  background-color: $fg-color;
+}
+
+/* Desktop Menu */
+.navbar-menu-icon {
+  margin: 0.5rem;
+}
+#top-navbar-menu h4 {
+  margin-bottom: 0;
+}
+#top-navbar-menu .navbar-end .navbar-item.last-navbar-item {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+/* Show/hide navbar */
+.hide-navbar {
+  top: 1.5 * (-$navbar-height) !important;
+}
+.show-navbar {
+  top: 0 !important;
+}
+
+#top-navbar-menu {
+  @media (max-width: $desktop-min - 1) {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    display: block;
+    transition: opacity (2 * $speed) $easing;
+  }
+}
+
+/* Dropdown menu */
+#top-navbar-menu.navbar-menu.is-active {
+  display: flex;
+  position: initial;
+  visibility: visible;
+  opacity: 1;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  box-shadow: none;
+
+  .navbar-end {
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 40vh;  // Push the menu items up
+  }
+
+  .navbar-item, .navbar-item span {
+    font-size: $h1-font-size;
+  }
+}

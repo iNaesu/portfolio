@@ -1,0 +1,25 @@
+/**
+ * Overall wrapper for the content
+ */
+
+$mobile-padding: $spacing-unit;
+$tablet-padding: 1.5 * $spacing-unit;
+$desktop-padding: 2 * $spacing-unit;
+$widescreen-padding: 4 * $spacing-unit;
+$max-content-width: 1400px;
+
+.wrapper {
+  padding: 0 $mobile-padding 0 $mobile-padding;
+  @media (min-width: $tablet-min) {
+    padding: 0 $tablet-padding 0 $tablet-padding;
+  }
+  @media (min-width: $desktop-min) {
+    padding: 0 $desktop-padding 0 $desktop-padding;
+  }
+  @media (min-width: $widescreen-min) {
+    max-width: $max-content-width;
+    padding: 0 $widescreen-padding 0 $widescreen-padding;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

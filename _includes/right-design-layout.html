@@ -1,0 +1,38 @@
+<div class="project columns is-desktop">
+
+  <!-- Project Screenshot -->
+  <div class="column is-5-desktop project-image-wrapper is-hidden-touch">
+    <img class="project-image-left"
+    src={{ design.screenshot.url }}
+    alt={{ design.screenshot.alt_text }}>
+  </div>
+
+  <!-- Spacing column -->
+  <div class="column">
+  </div>
+
+  <!-- Project description -->
+  <div class="column is-6-desktop project-description-wrapper">
+
+    <div class="project-header margin-bottom-m">
+
+      <div class="project-title">
+        <h3>{{ design.title }}</h3>
+      </div>
+
+    </div>
+
+    <div class="project-description margin-bottom-s">
+      <p>{{ design.description }}</p>
+    </div>
+
+    <!-- Only show on tablets & under -->
+    <div class="project-image-wrapper is-hidden-desktop">
+      <img class="project-image"
+      src={{ design.screenshot.url }}
+      alt={{ design.screenshot.alt_text }}>
+    </div>
+
+  </div>
+
+</div>

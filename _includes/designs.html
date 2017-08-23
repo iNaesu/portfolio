@@ -1,0 +1,17 @@
+<div id="designs" class="section-header">
+  <h2>DESIGNS</h2>
+</div>
+
+<!-- Alternate design posts between left & right layouts -->
+{% assign sorted_designs = (site.designs | sort: 'idx') %}
+{% for design in sorted_designs %}
+
+  {% assign mod = forloop.index0 | modulo: 2 %}
+
+  {% if mod == 0 %}
+    {% include left-design-layout.html %}
+  {% else %}
+    {% include right-design-layout.html %}
+  {% endif %}
+
+{% endfor %}

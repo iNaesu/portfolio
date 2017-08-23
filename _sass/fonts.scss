@@ -1,0 +1,74 @@
+/**
+* Fonts style
+*/
+
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+  margin: 0;
+  padding: 0;
+}
+
+$base-font-family: "Montserrat", sans-serif;
+$mobile-base-font-size: 12px;
+$tablet-base-font-size: 16px;
+
+$light-font-weight: 300;
+$regular-font-weight: 400;
+
+/* Font sizes */
+$font-ratio: 1.25;
+$p-font-size: 1rem;
+$h4-font-size: 1rem * $font-ratio;
+$h3-font-size: 1rem * $font-ratio * $font-ratio;
+$h2-font-size: 1rem * $font-ratio * $font-ratio * $font-ratio * $font-ratio;
+$h1-font-size: 1rem * $font-ratio * $font-ratio * $font-ratio * $font-ratio *
+               $font-ratio * $font-ratio * $font-ratio;
+
+/* Line spacing */
+$line-spacing-ratio: 0.5;
+$h1-line-spacing: $h1-font-size * $line-spacing-ratio;
+$h2-line-spacing: $h2-font-size * $line-spacing-ratio;
+$h3-line-spacing: $h3-font-size * $line-spacing-ratio;
+$h4-line-spacing: $h4-font-size * $line-spacing-ratio;
+$p-line-spacing: $p-font-size * $line-spacing-ratio;
+
+/* Letter spacing */
+$letter-spacing-ratio: 0.1;
+$h1-letter-spacing: $h1-font-size * $letter-spacing-ratio;
+$h2-letter-spacing: $h2-font-size * $letter-spacing-ratio;
+$h3-letter-spacing: $h3-font-size * $letter-spacing-ratio;
+$h4-letter-spacing: $h4-font-size * $letter-spacing-ratio;
+$p-letter-spacing: $p-font-size * $letter-spacing-ratio;
+
+/* Apply styles */
+h1, .h1-style {
+  font-size: $h1-font-size;
+  font-weight: $regular-font-weight;
+  margin-bottom: $h1-line-spacing;
+  letter-spacing: $h1-letter-spacing;
+}
+h2, .h2-style {
+  font-size: $h2-font-size;
+  font-weight: $regular-font-weight;
+  margin-bottom: $h2-line-spacing;
+  letter-spacing: $h2-letter-spacing;
+}
+h3, .h3-style {
+  font-size: $h3-font-size;
+  font-weight: $regular-font-weight;
+  margin-bottom: $h3-line-spacing;
+  letter-spacing: $h3-letter-spacing;
+}
+h4, .h4-style {
+  font-size: $h4-font-size;
+  font-weight: $regular-font-weight;
+  margin-bottom: $h4-line-spacing;
+  letter-spacing: $h4-letter-spacing;
+}
+p, .p-style {
+  font-size: $p-font-size;
+  font-weight: $light-font-weight;
+  margin-bottom: $p-line-spacing;
+  letter-spacing: $p-letter-spacing;
+}

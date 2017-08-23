@@ -1,0 +1,18 @@
+/**
+* About page style
+*/
+
+#about {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#email-button {
+  margin-bottom: 0.5 * $spacing-unit;
+}
+
+#copied-message {
+  transition: opacity 0.15s $easing;
+}
