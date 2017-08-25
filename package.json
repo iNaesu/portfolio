@@ -1,0 +1,30 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Sean Law Web Development Portfolio",
+  "main": "_site/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iNaesu/portfolio.git"
+  },
+  "keywords": [
+    "Sean",
+    "Law",
+    "Portfolio"
+  ],
+  "author": "Sean Law",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iNaesu/portfolio/issues"
+  },
+  "homepage": "https://github.com/iNaesu/portfolio#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.0"
+  }
+}
