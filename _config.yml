@@ -2,16 +2,14 @@ title: Sean Law | Web Developer
 email: sean.law.321@gmail.com
 description: >
   Sean Law - Web developer portfolio
-baseurl: "/portfolio" # the subpath of your site, e.g. /blog
-url: "https://inaesu.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/portfolio"
+url: "https://inaesu.github.io"
 github_username:  iNaesu
-
-# Build settings
 markdown: kramdown
+
 plugins:
   - jekyll-feed
 
-# Collections
 collections:
   - projects
   - designs
@@ -24,3 +22,7 @@ exclude:
   - package.json
   - todo.md
   - src
+
+sass:
+  sass_dir: _sass
+  style: compressed
