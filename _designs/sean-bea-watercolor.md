@@ -7,6 +7,6 @@ description: >
   reference to my love for the rod and reel.
 
 screenshot:
-  url: "assets/img/sean-bea-watercolor.png"
+  url: "dist/img/sean-bea-watercolor.png"
   alt_text: Sean-bea-wedding-invite
 ---

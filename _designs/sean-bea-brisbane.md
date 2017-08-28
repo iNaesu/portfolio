@@ -8,6 +8,6 @@ description: >
   schedule and a hand painted seamless pattern of some of the things that Bea
   and I love - e.g. Japanese food and Liverpool FC (go Reds!).
 screenshot:
-  url: "assets/img/sean-bea-party.png"
+  url: "dist/img/sean-bea-party.png"
   alt_text: Sean-bea-party-invite
 ---
