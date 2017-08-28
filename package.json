@@ -26,5 +26,9 @@
     "babel-preset-env": "^1.6.0",
     "gulp": "^3.9.1",
     "gulp-babel": "^7.0.0"
+  },
+  "devDependencies": {
+    "eslint-config-google": "^0.9.1",
+    "gulp-eslint": "^4.0.0"
   }
 }
