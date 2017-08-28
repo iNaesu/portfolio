@@ -1,6 +1,6 @@
 /* Start Script ------------------------------------------------------------- */
 
-/* Animate elementss */
+/* Animate elements */
 animateElements();
 
 /* Enable navbar dropdown on burger click */
