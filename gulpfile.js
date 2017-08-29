@@ -4,6 +4,8 @@ const eslint = require('gulp-eslint');
 const child = require('child_process');
 const gutil = require('gulp-util');
 const browserSync = require('browser-sync').create();
+const ghPages = require('gulp-gh-pages');
+const siteRoot = '_site/';
 
 /** Default task:
  *    - lint & compile js
@@ -50,7 +52,6 @@ gulp.task('jekyll', () => {
 
 /* Livereload using BrowserSync */
 gulp.task('serve', () => {
-  const siteRoot = '_site/';
   browserSync.init({
     files: [siteRoot + '**'],
     port: 4000,
@@ -60,3 +61,11 @@ gulp.task('serve', () => {
   });
 });
 
+/* Deploy to gh-pages repo */
+gulp.task('deploy', () => {
+  const options = {
+    'remoteUrl': 'git@github.com:iNaesu/portfolio-gh-pages.git'
+  };
+  return gulp.src(siteRoot + '**/*')
+    .pipe(ghPages(options));
+})
