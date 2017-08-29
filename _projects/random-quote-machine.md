@@ -26,8 +26,8 @@ skills:
     examples:
       - Sketch App
 screenshot:
-    5x7_url: "dist/img/random-quote-machine-5x7.png"
-    8x5_url: "dist/img/random-quote-machine-8x5.png"
+    5x7_url: "src/img/random-quote-machine-5x7.png"
+    8x5_url: "src/img/random-quote-machine-8x5.png"
     alt_text: Random-quote-machine-screenshot
 ---
 

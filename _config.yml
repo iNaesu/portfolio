@@ -21,7 +21,7 @@ exclude:
   - gulpfile.js
   - package.json
   - todo.md
-  - src
+  - src/js/index.js
 
 sass:
   sass_dir: _sass

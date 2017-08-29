@@ -7,6 +7,6 @@ description: >
   in the design draws inspiration from their adventures in Greece as well as
   Kimmy's love for flora.
 screenshot:
-  url: "dist/img/matt-kimmy.png"
+  url: "src/img/matt-kimmy.png"
   alt_text: Matt-and-kimmy-wedding-invite
 ---
