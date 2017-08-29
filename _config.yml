@@ -22,6 +22,7 @@ exclude:
   - package.json
   - todo.md
   - src/js/index.js
+  - src/sketch
 
 sass:
   sass_dir: _sass
