@@ -1,3 +1,3 @@
 * Some form of background
 * Animation
-* actual text for content
+* Explore minification of sass files using Jekyll

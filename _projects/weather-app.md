@@ -33,8 +33,8 @@ skills:
     examples:
       - Sketch App
 screenshot:
-    5x7_url: "assets/img/local-weather-5x7.png"
-    8x5_url: "assets/img/local-weather-8x5.png"
+    5x7_url: "src/img/local-weather-5x7.png"
+    8x5_url: "src/img/local-weather-8x5.png"
     alt_text: Weather-app-screenshot
 ---
 

@@ -1,6 +1,6 @@
 /* Start Script ------------------------------------------------------------- */
 
-/* Animate elementss */
+/* Animate elements */
 animateElements();
 
 /* Enable navbar dropdown on burger click */
@@ -69,7 +69,7 @@ $('.sliding-link').click(function(e) {
 /**
  * Fade an element in over a given duration with an optional callback after the
  * fade is complete
- * @param {jQuery element} el - jQuery element
+ * @param {obj} el - jQuery element
  * @param {number} duration - Duration to fade in over
  * @param {function} cb - Optional callback function
  */

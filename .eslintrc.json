@@ -1,0 +1,16 @@
+{
+    "extends": ["eslint:recommended", "google"],
+    "env": {
+        "browser": true,
+        "jquery": true
+    },
+    "globals": {
+        "Promise": true,
+        "moment": true,
+        "google": true,
+        "Clipboard": true
+    },
+    "parserOptions": {
+        "ecmaVersion": 6
+    }
+}
