@@ -7,6 +7,29 @@ const browserSync = require('browser-sync').create();
 const ghPages = require('gulp-gh-pages');
 const siteRoot = '_site/';
 
+/* fetch command line arguments */
+const args = (argList => {
+
+  let args = {}, a, opt, thisOpt, curOpt;
+  for (a = 0; a < argList.length; a++) {
+    thisOpt = argList[a].trim();
+    opt = thisOpt.replace(/^\-+/, '');
+
+    if (opt === thisOpt) {
+      // argument value
+      if (curOpt) args[curOpt] = opt;
+      curOpt = null;
+    }
+    else {
+      // argument name
+      curOpt = opt;
+      args[curOpt] = true;
+    }
+  }
+
+  return args;
+})(process.argv);
+
 /** Default task:
  *    - lint & compile js
  *    - build jekyll site
@@ -63,8 +86,15 @@ gulp.task('serve', () => {
 
 /* Deploy to gh-pages repo */
 gulp.task('deploy', () => {
+  const commitMsg = args.msg;
+  if (!commitMsg) {
+    console.error('[gulp-gh-pages] Error: No commit message');
+    console.error('[gulp-gh-pages] Usage: gulp deploy --msg "commit message"');
+    return;
+  }
   const options = {
-    'remoteUrl': 'git@github.com:iNaesu/portfolio-gh-pages.git'
+    'remoteUrl': 'git@github.com:iNaesu/portfolio-gh-pages.git',
+    'message': commitMsg
   };
   return gulp.src(siteRoot + '**/*')
     .pipe(ghPages(options));
