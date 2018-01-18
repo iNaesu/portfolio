@@ -1,6 +1,6 @@
 ---
 title: RANDOM QUOTES
-idx: 1
+idx: 2
 description: >
   FreeCodeCamp task - This app retrieves a random quote from the FavQs API
   everytime you click a button. It also enables you to tweet out the quote.

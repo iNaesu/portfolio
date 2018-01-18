@@ -27,9 +27,12 @@
         <a class="h4-fa-button" href={{ project.github_url }} target="_blank">
           <i class="fa fa-github"></i>
         </a>
-        <a class="h4-fa-button" href={{ project.codepen_url }} target="_blank">
-          <i class="fa fa-codepen"></i>
-        </a>
+        {% if project.codepen_url %}
+          <a class="h4-fa-button" href={{ project.codepen_url }}
+          target="_blank">
+            <i class="fa fa-codepen"></i>
+          </a>
+        {% endif %}
       </div>
 
     </div>
