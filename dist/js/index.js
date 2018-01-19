@@ -124,16 +124,36 @@ function scrollAnimation() {
     'origin': 'left',
     'distance': '2rem',
     'easing': 'ease',
-    'duration': 800
+    'duration': 800,
+    'reset': false
   };
   var fadeInLeft = {
     'scale': 1,
     'origin': 'right',
     'distance': '2rem',
     'easing': 'ease',
-    'duration': 800
+    'duration': 800,
+    'reset': false
   };
-  sr.reveal('.fade-in-right-staggered', fadeInRight, 800);
-  sr.reveal('.fade-in-right', fadeInRight);
-  sr.reveal('.fade-in-left', fadeInLeft);
+  var fadeIn = {
+    'scale': 1,
+    'easing': 'ease',
+    'duration': 800,
+    'reset': false
+  };
+
+  var desktopMin = 1008;
+  var rightAnimation = {};
+  var leftAnimation = {};
+  if (window.innerWidth >= desktopMin) {
+    rightAnimation = fadeInRight;
+    leftAnimation = fadeInLeft;
+  } else {
+    rightAnimation = fadeIn;
+    leftAnimation = fadeIn;
+  }
+
+  sr.reveal('.fade-in-right-staggered', rightAnimation, 800);
+  sr.reveal('.fade-in-right', rightAnimation);
+  sr.reveal('.fade-in-left', leftAnimation);
 }
