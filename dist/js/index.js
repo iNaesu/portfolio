@@ -2,8 +2,8 @@
 
 /* Start Script ------------------------------------------------------------- */
 
-/* Animate elements */
-animateElements();
+/* Animations when an element is scrolled into view */
+scrollAnimation();
 
 /* Enable navbar dropdown on burger click */
 $('#top-navbar-burger').click(toggleNavbarDropdown);
@@ -66,31 +66,6 @@ $('.sliding-link').click(function (e) {
 /* Function Declarations ---------------------------------------------------- */
 
 /**
- * Fade an element in over a given duration with an optional callback after the
- * fade is complete
- * @param {obj} el - jQuery element
- * @param {number} duration - Duration to fade in over
- * @param {function} cb - Optional callback function
- */
-function fadeIn(el, duration, cb) {
-  el.animate({ 'opacity': '1' }, duration, cb);
-}
-
-/**
- * Add animation to elementss in the site
- */
-function animateElements() {
-  var baseDuration = 500;
-
-  /* Landing page - Fade in title -> subtitle -> button on page load */
-  fadeIn($('#landing-title'), 2 * baseDuration, function () {
-    fadeIn($('#landing-subtitle'), baseDuration, function () {
-      fadeIn($('#see-work-button'), baseDuration);
-    });
-  });
-}
-
-/**
  * This function:
  * - Toggles the burger state
  * - Toggles the dropdown menu
@@ -135,4 +110,50 @@ function manipulateNavbar() {
   }
 
   previousDistanceFromTop = currentDistanceFromTop;
+}
+
+/**
+ * Configures and applies animations when an element is scrolled into view.
+ * Library - https://github.com/jlmakes/scrollreveal.
+ */
+function scrollAnimation() {
+  window.sr = ScrollReveal({ reset: true });
+
+  var fadeInRight = {
+    'scale': 1,
+    'origin': 'left',
+    'distance': '2rem',
+    'easing': 'ease',
+    'duration': 800,
+    'reset': false
+  };
+  var fadeInLeft = {
+    'scale': 1,
+    'origin': 'right',
+    'distance': '2rem',
+    'easing': 'ease',
+    'duration': 800,
+    'reset': false
+  };
+  var fadeIn = {
+    'scale': 1,
+    'easing': 'ease',
+    'duration': 800,
+    'reset': false
+  };
+
+  var desktopMin = 1008;
+  var rightAnimation = {};
+  var leftAnimation = {};
+  if (window.innerWidth >= desktopMin) {
+    rightAnimation = fadeInRight;
+    leftAnimation = fadeInLeft;
+  } else {
+    rightAnimation = fadeIn;
+    leftAnimation = fadeIn;
+  }
+
+  sr.reveal('.fade-in-right-staggered', rightAnimation, 800);
+  sr.reveal('.fade-in-right', rightAnimation);
+  sr.reveal('.fade-in-left', leftAnimation);
 }
