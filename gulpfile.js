@@ -94,7 +94,8 @@ gulp.task('deploy', () => {
   }
   const options = {
     'remoteUrl': 'git@github.com:iNaesu/portfolio-gh-pages.git',
-    'message': commitMsg
+    'message': commitMsg,
+    'branch': 'master'
   };
   return gulp.src(siteRoot + '**/*')
     .pipe(ghPages(options));

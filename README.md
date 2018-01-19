@@ -50,8 +50,8 @@ Deploying on Github Pages
 gulp deploy --msg "commit message"
 ```
 
-The above command deploys the site to the remote repository defined in the
-`'deploy'` task in `root/gulpfile.js`.
+The above command deploys the site to the remote repository and branch defined
+in the `'deploy'` task in `root/gulpfile.js`.
 
 
 License
