@@ -3,8 +3,6 @@
 /* Animations when an element is scrolled into view */
 scrollAnimation();
 
-landingPageAnimation();
-
 /* Enable navbar dropdown on burger click */
 $('#top-navbar-burger').click(toggleNavbarDropdown);
 $('.navbar-item').click(function() {
@@ -67,34 +65,6 @@ $('.sliding-link').click(function(e) {
 });
 
 /* Function Declarations ---------------------------------------------------- */
-
-/**
- * Fade an element in over a given duration with an optional callback after the
- * fade is complete
- * @param {obj} el - jQuery element
- * @param {number} duration - Duration to fade in over
- * @param {function} cb - Optional callback function
- */
-function fadeIn(el, duration, cb) {
-  el.animate(
-    {'opacity': '1'},
-    duration,
-    cb
-  );
-}
-
-/**
- * Animations for ONLY the landing page.
- */
-function landingPageAnimation() {
-  const baseDuration = 500;
-
-  fadeIn($('#landing-title'), 2 * baseDuration, function() {
-    fadeIn($('#landing-subtitle'), baseDuration, function() {
-      fadeIn($('#see-work-button'), baseDuration);
-    });
-  });
-}
 
 /**
  * This function:
@@ -166,6 +136,7 @@ function scrollAnimation() {
     'easing': 'ease',
     'duration': 800
   };
+  sr.reveal('.fade-in-right-staggered', fadeInRight, 800);
   sr.reveal('.fade-in-right', fadeInRight);
   sr.reveal('.fade-in-left', fadeInLeft);
 }
