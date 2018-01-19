@@ -2,8 +2,10 @@
 
 /* Start Script ------------------------------------------------------------- */
 
-/* Animate elements */
-animateElements();
+/* Animations when an element is scrolled into view */
+scrollAnimation();
+
+landingPageAnimation();
 
 /* Enable navbar dropdown on burger click */
 $('#top-navbar-burger').click(toggleNavbarDropdown);
@@ -77,12 +79,11 @@ function fadeIn(el, duration, cb) {
 }
 
 /**
- * Add animation to elementss in the site
+ * Animations for ONLY the landing page.
  */
-function animateElements() {
+function landingPageAnimation() {
   var baseDuration = 500;
 
-  /* Landing page - Fade in title -> subtitle -> button on page load */
   fadeIn($('#landing-title'), 2 * baseDuration, function () {
     fadeIn($('#landing-subtitle'), baseDuration, function () {
       fadeIn($('#see-work-button'), baseDuration);
@@ -135,4 +136,29 @@ function manipulateNavbar() {
   }
 
   previousDistanceFromTop = currentDistanceFromTop;
+}
+
+/**
+ * Configures and applies animations when an element is scrolled into view.
+ * Library - https://github.com/jlmakes/scrollreveal.
+ */
+function scrollAnimation() {
+  window.sr = ScrollReveal({ reset: true });
+
+  var fadeInRight = {
+    'scale': 1,
+    'origin': 'left',
+    'distance': '2rem',
+    'easing': 'ease',
+    'duration': 800
+  };
+  var fadeInLeft = {
+    'scale': 1,
+    'origin': 'right',
+    'distance': '2rem',
+    'easing': 'ease',
+    'duration': 800
+  };
+  sr.reveal('.fade-in-right', fadeInRight);
+  sr.reveal('.fade-in-left', fadeInLeft);
 }
