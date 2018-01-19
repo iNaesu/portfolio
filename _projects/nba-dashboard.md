@@ -3,8 +3,8 @@ title: NBA DASHBOARD
 idx: 0
 description: >
     Video game style dashboard app built in React.js - This app enables users to
-    look up player profiles and compare the player's stats to the rest of the
-    league. It also uses an stat-matching algorithm to generate similar players
+    look up player profiles and compare a player's stats to the rest of the
+    league. It also uses a stat-matching algorithm to generate similar players
     suggestions.
 live_url: "https://inaesu.github.io/nba-player-dashboard/"
 github_url: "https://github.com/iNaesu/nba-player-dashboard"
