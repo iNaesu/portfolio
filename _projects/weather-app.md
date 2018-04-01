@@ -1,6 +1,6 @@
 ---
 title: CURRENT WEATHER APP
-idx: 1
+idx: 2
 description: >
   This app displays the current weather and time at your location. Its search
   function also enables you to get the current weather at any location via the
