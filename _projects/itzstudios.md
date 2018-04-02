@@ -3,9 +3,10 @@ title: ITZ STUDIOS WEBSITE
 idx: 1
 description: >
     Ivan is a budding photographer based in Brisbane. With his expanding
-    business, Ivan needed a web solution to showcase his work.
-
-    I partnered with him to build a website that
+    business, Ivan needed a web solution to showcase his work as well as a means
+    for clients to get in touch with him. With minimal text, a muted colour
+    palette and full-screen image displays, the website is tailored to put
+    Ivan's beautiful work in the spotlight.
 live_url: "http://itzstudios.com"
 # Each skill can have up to 6 examples
 skills:
